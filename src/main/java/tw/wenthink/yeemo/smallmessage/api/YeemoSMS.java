@@ -8,12 +8,12 @@
  * it under the terms of the GNU General Public License as
  * published by the Free Software Foundation, either version 3 of the
  * License, or (at your option) any later version.
- * 
+ *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public
  * License along with this program.  If not, see
  * <http://www.gnu.org/licenses/gpl-3.0.html>.
@@ -23,9 +23,6 @@ package tw.wenthink.yeemo.smallmessage.api;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
-import net.kyori.adventure.text.minimessage.MiniMessage;
-import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
-import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import org.bukkit.entity.Player;
 import tw.wenthink.yeemo.smallmessage.YeemoSmallMessagePlugin;
 
@@ -117,7 +114,7 @@ public interface YeemoSMS {
     /**
      * @param component Component
      * @return String
-     * @see MiniMessage#serialize(Component)
+     * @see <a href="https://docs.adventure.kyori.net/minimessage.html#api">API</a>
      * @since 1.0.0
      */
     String serialize(Component component);
@@ -126,7 +123,7 @@ public interface YeemoSMS {
      * @param component Component
      * @param useLegacy True if only the legacy version is used
      * @return String
-     * @see MiniMessage#serialize(Component)
+     * @see <a href="https://docs.adventure.kyori.net/minimessage.html#api">API</a>
      * @since 1.0.0
      */
     String serialize(Component component, boolean useLegacy);
@@ -134,7 +131,7 @@ public interface YeemoSMS {
     /**
      * @param message Message
      * @return Component
-     * @see MiniMessage#deserialize(Object)
+     * @see <a href="https://docs.adventure.kyori.net/minimessage.html#api">API</a>
      * @since 1.0.0
      */
     Component deserialize(String message);
@@ -143,7 +140,7 @@ public interface YeemoSMS {
      * @param message   Message
      * @param useLegacy True if only the legacy version is used
      * @return Component
-     * @see LegacyComponentSerializer#legacyAmpersand()#serialize(Component)
+     * @see <a href="https://docs.adventure.kyori.net/serializer/legacy.html">LegacyComponentSerializer</a>
      * @since 1.0.0
      */
     Component deserialize(String message, boolean useLegacy);
@@ -151,7 +148,7 @@ public interface YeemoSMS {
     /**
      * @param component Component
      * @return String
-     * @see PlainTextComponentSerializer#plainText()#serialize(Component)
+     * @see <a href="https://docs.adventure.kyori.net/serializer/plain.html">PlainTextComponentSerializer</a>
      * @since 1.0.0
      */
     String getPlainText(Component component);
@@ -160,7 +157,7 @@ public interface YeemoSMS {
      * @param component     Component
      * @param includeLegacy True if want include legacy version is used
      * @return String
-     * @see PlainTextComponentSerializer#plainText()#serialize(Component)
+     * @see <a href="https://docs.adventure.kyori.net/serializer/plain.html">PlainTextComponentSerializer</a>
      * @since 1.0.0
      */
     String getPlainText(Component component, boolean includeLegacy);
