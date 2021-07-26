@@ -70,6 +70,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
+                <!--                <configuration>-->
+                <!--                    <outputDirectory>D:\Yeemo\DevServer\PaperMC\plugins</outputDirectory>-->
+                <!--                </configuration>-->
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -102,7 +105,6 @@
                 <version>2.0.0</version>
                 <configuration>
                     <verbose>false</verbose>
-                    <addSvnKeyWords>true</addSvnKeyWords>
                     <includes>
                         <include>**/*.java</include>
                     </includes>
