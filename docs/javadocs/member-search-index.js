@@ -136,10 +136,6 @@ memberSearchIndex = [{
 }, {
     "p": "tw.wenthink.yeemo.smallmessage.permission",
     "c": "Permission",
-    "l": "PERMISSION_CHAT_COLOR"
-}, {
-    "p": "tw.wenthink.yeemo.smallmessage.permission",
-    "c": "Permission",
     "l": "PERMISSION_CHAT_COLOR_LEGACY"
 }, {
     "p": "tw.wenthink.yeemo.smallmessage.permission",
