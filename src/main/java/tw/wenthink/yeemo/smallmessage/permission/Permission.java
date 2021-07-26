@@ -38,10 +38,6 @@ public enum Permission {
      */
     PERMISSION_STAR("*"),
     /**
-     * Can use chat color
-     */
-    PERMISSION_CHAT_COLOR("yeemo.sms.chat.color"),
-    /**
      * use tag version chat color
      */
     PERMISSION_CHAT_COLOR_TAG("yeemo.sms.chat.color.tag"),

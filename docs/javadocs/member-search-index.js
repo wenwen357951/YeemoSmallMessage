@@ -43,6 +43,10 @@ memberSearchIndex = [{
     "l": "format(Object...)",
     "u": "format(java.lang.Object...)"
 }, {
+    "p": "tw.wenthink.yeemo.smallmessage.api",
+    "c": "YeemoSMS",
+    "l": "getAPI()"
+}, {
     "p": "tw.wenthink.yeemo.smallmessage",
     "c": "YeemoSmallMessagePlugin",
     "l": "getAPI()"

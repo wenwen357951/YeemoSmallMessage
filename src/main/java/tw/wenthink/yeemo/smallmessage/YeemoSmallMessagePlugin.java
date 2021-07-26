@@ -66,7 +66,6 @@ public final class YeemoSmallMessagePlugin extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         this.yeemoSmallMessageAPI = new YeemoSMSApiProvider(instance);
-        System.out.println(instance);
         getServer().getPluginManager().registerEvents(new ChatListener(this), this);
 
     }

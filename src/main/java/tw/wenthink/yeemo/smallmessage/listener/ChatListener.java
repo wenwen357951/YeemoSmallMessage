@@ -28,6 +28,7 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import tw.wenthink.yeemo.smallmessage.YeemoSmallMessagePlugin;
 import tw.wenthink.yeemo.smallmessage.api.ParseVersion;
+import tw.wenthink.yeemo.smallmessage.permission.Permission;
 
 /**
  * Player Chat Event Listener
@@ -57,17 +58,14 @@ public class ChatListener implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerChat(AsyncChatEvent event) {
         Player player = event.getPlayer();
-        if (!player.hasPermission("yeemo.sms.chat.color")) {
-            return;
-        }
 
-        if (player.hasPermission("yeemo.sms.chat.color.tag")
-                && player.hasPermission("yeemo.sms.chat.color.legacy")) {
+        if (player.hasPermission(Permission.PERMISSION_CHAT_COLOR_LEGACY.toString())
+                && player.hasPermission(Permission.PERMISSION_CHAT_COLOR_TAG.toString())) {
             event.message(plugin.getAPI().reparse(event.originalMessage(), ParseVersion.BOTH));
             return;
         }
 
-        if (player.hasPermission("yeemo.sms.chat.color.tag")) {
+        if (player.hasPermission(Permission.PERMISSION_CHAT_COLOR_TAG.toString())) {
             event.message(plugin.getAPI().reparse(event.originalMessage(), ParseVersion.ONLY_TAG));
             return;
         }
