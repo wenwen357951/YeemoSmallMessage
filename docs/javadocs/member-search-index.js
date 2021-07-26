@@ -38,6 +38,11 @@ memberSearchIndex = [{
     "l": "deserialize(String, boolean)",
     "u": "deserialize(java.lang.String,boolean)"
 }, {
+    "p": "tw.wenthink.yeemo.smallmessage.permission",
+    "c": "Permission",
+    "l": "format(Object...)",
+    "u": "format(java.lang.Object...)"
+}, {
     "p": "tw.wenthink.yeemo.smallmessage",
     "c": "YeemoSmallMessagePlugin",
     "l": "getAPI()"
@@ -125,6 +130,22 @@ memberSearchIndex = [{
     "l": "parseText(String)",
     "u": "parseText(java.lang.String)"
 }, {
+    "p": "tw.wenthink.yeemo.smallmessage.permission",
+    "c": "Permission",
+    "l": "PERMISSION_CHAT_COLOR"
+}, {
+    "p": "tw.wenthink.yeemo.smallmessage.permission",
+    "c": "Permission",
+    "l": "PERMISSION_CHAT_COLOR_LEGACY"
+}, {
+    "p": "tw.wenthink.yeemo.smallmessage.permission",
+    "c": "Permission",
+    "l": "PERMISSION_CHAT_COLOR_TAG"
+}, {
+    "p": "tw.wenthink.yeemo.smallmessage.permission",
+    "c": "Permission",
+    "l": "PERMISSION_STAR"
+}, {
     "p": "tw.wenthink.yeemo.smallmessage.api",
     "c": "YeemoSMS",
     "l": "reparse(Component)",
@@ -174,14 +195,27 @@ memberSearchIndex = [{
     "c": "YeemoSMSApiProvider",
     "l": "serialize(Component, boolean)",
     "u": "serialize(net.kyori.adventure.text.Component,boolean)"
+}, {
+    "p": "tw.wenthink.yeemo.smallmessage.permission",
+    "c": "Permission",
+    "l": "toString()"
 }, {
     "p": "tw.wenthink.yeemo.smallmessage.api",
     "c": "ParseVersion",
     "l": "valueOf(String)",
     "u": "valueOf(java.lang.String)"
 }, {
+    "p": "tw.wenthink.yeemo.smallmessage.permission",
+    "c": "Permission",
+    "l": "valueOf(String)",
+    "u": "valueOf(java.lang.String)"
+}, {
     "p": "tw.wenthink.yeemo.smallmessage.api",
     "c": "ParseVersion",
+    "l": "values()"
+}, {
+    "p": "tw.wenthink.yeemo.smallmessage.permission",
+    "c": "Permission",
     "l": "values()"
 }, {
     "p": "tw.wenthink.yeemo.smallmessage",

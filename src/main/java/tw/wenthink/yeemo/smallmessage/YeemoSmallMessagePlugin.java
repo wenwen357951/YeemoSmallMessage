@@ -74,7 +74,7 @@ public final class YeemoSmallMessagePlugin extends JavaPlugin {
      */
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        instance = null;
     }
 
     /**

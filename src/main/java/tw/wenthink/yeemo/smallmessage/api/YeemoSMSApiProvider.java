@@ -41,6 +41,9 @@ public class YeemoSMSApiProvider implements YeemoSMS {
     private final YeemoSmallMessagePlugin plugin;
     private final MiniMessage miniMessage;
 
+    /**
+     * @param plugin YeemoSmallMessagePlugin
+     */
     public YeemoSMSApiProvider(YeemoSmallMessagePlugin plugin) {
         this.plugin = plugin;
         this.miniMessage = MiniMessage.get();
