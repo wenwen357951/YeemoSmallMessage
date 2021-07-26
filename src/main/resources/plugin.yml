@@ -1,0 +1,6 @@
+name: YeemoSMS
+version: ${project.version}
+main: tw.wenthink.yeemo.smallmessage.YeemoSmallMessagePlugin
+api-version: 1.17
+author: WenWen_xD
+description: Yeemo Small Message aka YeemoSMS. This plugin is for yeemo build server.
