@@ -9,8 +9,8 @@ Yeemo Build Team's plug-in Small Message Plugin (InDev)
 - yeemo.sms.chat.color.legacy
 
 ## Licence
-        Yeemo Build Team's Minecraft Server Plugin
-        Copyright (C) 2021 ShengWen-Chen(WenWen_xD)
+Yeemo Build Team's Minecraft Server Plugin
+Copyright (C) 2021 ShengWen-Chen(WenWen_xD)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
