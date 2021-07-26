@@ -23,6 +23,7 @@
 package tw.wenthink.yeemo.smallmessage;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import org.checkerframework.checker.nullness.qual.NonNull;
 import tw.wenthink.yeemo.smallmessage.api.YeemoSMS;
 import tw.wenthink.yeemo.smallmessage.api.YeemoSMSApiProvider;
 import tw.wenthink.yeemo.smallmessage.listener.ChatListener;
@@ -41,7 +42,9 @@ import tw.wenthink.yeemo.smallmessage.listener.ChatListener;
  */
 public final class YeemoSmallMessagePlugin extends JavaPlugin {
 
+    @NonNull
     private static YeemoSmallMessagePlugin instance;
+    @NonNull
     private YeemoSMS yeemoSmallMessageAPI;
 
     /**
@@ -61,8 +64,9 @@ public final class YeemoSmallMessagePlugin extends JavaPlugin {
      */
     @Override
     public void onEnable() {
-        this.yeemoSmallMessageAPI = new YeemoSMSApiProvider(instance);
         // Plugin startup logic
+        this.yeemoSmallMessageAPI = new YeemoSMSApiProvider(instance);
+        System.out.println(instance);
         getServer().getPluginManager().registerEvents(new ChatListener(this), this);
 
     }
@@ -74,7 +78,7 @@ public final class YeemoSmallMessagePlugin extends JavaPlugin {
      */
     @Override
     public void onDisable() {
-        instance = null;
+        // Plugin stop logic
     }
 
     /**
@@ -84,6 +88,7 @@ public final class YeemoSmallMessagePlugin extends JavaPlugin {
      * @see YeemoSMS
      * @since 1.0.0
      */
+    @NonNull
     public YeemoSMS getAPI() {
         return yeemoSmallMessageAPI;
     }
@@ -94,6 +99,7 @@ public final class YeemoSmallMessagePlugin extends JavaPlugin {
      * @return Instance
      * @since 1.0.0
      */
+    @NonNull
     public static YeemoSmallMessagePlugin getInstance() {
         return instance;
     }
