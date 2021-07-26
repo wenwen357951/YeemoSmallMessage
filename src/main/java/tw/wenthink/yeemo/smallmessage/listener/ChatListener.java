@@ -22,12 +22,12 @@
 package tw.wenthink.yeemo.smallmessage.listener;
 
 import io.papermc.paper.event.player.AsyncChatEvent;
-import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import tw.wenthink.yeemo.smallmessage.YeemoSmallMessagePlugin;
+import tw.wenthink.yeemo.smallmessage.api.ParseVersion;
 
 /**
  * Player Chat Event Listener
@@ -56,8 +56,22 @@ public class ChatListener implements Listener {
      */
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerChat(AsyncChatEvent event) {
-        String message = plugin.getAPI().serialize(event.originalMessage());
-        Component originalMessage = plugin.getAPI().reparse(event.originalMessage());
         Player player = event.getPlayer();
+        if (!player.hasPermission("yeemo.sms.chat.color")) {
+            return;
+        }
+
+        if (player.hasPermission("yeemo.sms.chat.color.tag")
+                && player.hasPermission("yeemo.sms.chat.color.legacy")) {
+            event.message(plugin.getAPI().reparse(event.originalMessage(), ParseVersion.BOTH));
+            return;
+        }
+
+        if (player.hasPermission("yeemo.sms.chat.color.tag")) {
+            event.message(plugin.getAPI().reparse(event.originalMessage(), ParseVersion.ONLY_TAG));
+            return;
+        }
+
+        event.message(plugin.getAPI().reparse(event.originalMessage(), ParseVersion.ONLY_LEGACY));
     }
 }
