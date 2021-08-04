@@ -33,7 +33,7 @@ import tw.wenthink.yeemo.smallmessage.listener.ChatListener;
  *
  * <p>
  * Yeemo small message aka <b>YeemoSMS</b>.
- * This plugin is make for yeemo build team server.
+ * This plugin is make for yeemo build team server!
  * </p>
  *
  * @author ShengWen-Chen wenwen357951@gmail.com
